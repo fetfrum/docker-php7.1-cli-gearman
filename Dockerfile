@@ -5,4 +5,8 @@ RUN apt-get install -y python-software-properties software-properties-common lan
 RUN LC_ALL=en_US.UTF-8 add-apt-repository -y ppa:ondrej/php
 RUN apt-get update -y
 
-RUN apt-get install -y php7.1-cli php7.1-gearman
+RUN apt-get install -y php7.1-cli php7.1-gearman git
+
+# Clean up.
+RUN apt-get clean && \
+    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
