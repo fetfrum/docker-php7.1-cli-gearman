@@ -8,7 +8,7 @@ RUN apt-get update -y
 
 RUN apt-get install -y php7.1-cli php7.1-gearman php7.1-xml php7.1-mbstring \
                        php7.1-xdebug php7.1-curl php7.1-mysql php7.1-sqlite3 \
-                       php7.1-redis unzip curl
+                       php7.1-redis php7.1-bcmath unzip curl
 RUN rm /etc/php/7.1/cli/conf.d/20-xdebug.ini
 
 # Clean up.
